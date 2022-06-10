@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import lombok.RequiredArgsConstructor;
 import site.metacoding.blogv3.config.auth.LoginUser;
 import site.metacoding.blogv3.domain.category.Category;
-import site.metacoding.blogv3.domain.love.Love;
 import site.metacoding.blogv3.domain.user.User;
 import site.metacoding.blogv3.handler.ex.CustomException;
 import site.metacoding.blogv3.service.PostService;
@@ -82,23 +81,6 @@ public class PostController {
 
         return "redirect:/user/" + loginUser.getUser().getId() + "/post";
 
-        // LoginUser 테스트 시작
-        // System.out.println("=======================");
-        // System.out.println(loginUser.getUsername());
-        // System.out.println(loginUser.getUser().getId());
-        // System.out.println("=======================");
-
-        // PostWriteReqDto 테스트 완료!!
-        // if (postWriteReqDto.getTitle() == null) {
-        // throw new NullPointerException("title이 없습니다.");
-        // }
-        // if (postWriteReqDto.getContent() == null) {
-        // throw new NullPointerException("content가 없습니다.");
-        // }
-        // if (postWriteReqDto.getCategoryId() == null) {
-        // throw new NullPointerException("categoryId가 없습니다.");
-        // }
-        // return "1";
     }
 
     @GetMapping("/s/post/write-form")

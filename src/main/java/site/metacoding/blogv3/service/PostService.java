@@ -6,12 +6,11 @@ import java.util.Optional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
+import javax.swing.text.DefaultStyledDocument.ElementSpec;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -163,7 +162,7 @@ public class PostService {
 
         // 1. UUID로 파일쓰고 경로 리턴 받기
         String thumnail = null;
-        if (postWriteReqDto.getThumnailFile() != null) {
+        if (!(postWriteReqDto.getThumnailFile() == null || postWriteReqDto.getThumnailFile().isEmpty())) {
             thumnail = UtilFileUpload.write(uploadFolder,
                     postWriteReqDto.getThumnailFile());
         }

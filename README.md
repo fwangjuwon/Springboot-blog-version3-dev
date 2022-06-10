@@ -1,5 +1,8 @@
 # 스프링부트 JPA 블로그 V3 - GREEN Computer
 
+### 파일업로드 경로
+- git clone 을 받으면 yml에서 업로드 경로를 꼭 변경하세요
+
 ### 시큐리티 테스트 참고
 - https://tecoble.techcourse.co.kr/post/2020-09-30-spring-security-test/
 
